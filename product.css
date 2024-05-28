@@ -1,0 +1,284 @@
+* {
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.head-slider {
+    background-color: rgb(109, 28, 28);
+    height: 65px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#sliding-text {
+    position: relative;
+    margin: 0%;
+    padding: 0%;
+    transition: all ease-in-out 0.8s;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: 108px;
+    margin-left: 10%;
+}
+
+#navbar {
+    background-color: rgb(249, 249, 249);
+    top: 45px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.banner {
+    margin: 60px 0px;
+}
+
+.logos {
+    background-color: rgb(239 187 172);
+    height: 420px;
+    padding: 11px;
+}
+
+.menu ul li {
+    list-style: none;
+    padding: 8px 11px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+
+    color: #333333;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 0.25rem 0;
+}
+
+a.underline-hover-effect {
+    text-decoration: none;
+    color: inherit;
+}
+
+.underline-hover-effect {
+    display: inline-block;
+    padding-bottom: 0.99rem;
+    position: relative;
+}
+
+.underline-hover-effect::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333333;
+    transition: all ease-in-out 0.25s;
+}
+
+.underline-hover-effect:hover::before {
+    width: 100%;
+}
+
+.icon ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon ul li {
+    list-style: none;
+    padding: 1%;
+    margin: 1%;
+}
+
+.icon ul li img {
+    height: 30px;
+    width: 30px;
+    padding-left: 4px;
+    margin-top: 15px;
+}
+
+#side-content {
+    margin: auto;
+    padding: 66px;
+    ;
+}
+
+#short {
+    border: none;
+    text-decoration: none;
+    color: rgba(115, 113, 113, 0.656);
+    font-size: 20px;
+    margin-top: 14px;
+    text-align: center;
+    margin-left: 15%;
+    transition: 0.8s;
+}
+
+#short:hover {
+    color: rgba(34, 34, 34, 0.729);
+}
+
+.dropdown-menu {
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    background-color: rgb(252, 243, 228);
+    border: none;
+}
+
+.dropdown-menu li a {
+    transition: all ease-in-out 0.6s;
+}
+
+.dropdown-menu li a:hover {
+    color: rgb(121, 35, 46);
+}
+
+#accordians {
+    color: rgba(34, 34, 34, 0.729);
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 100;
+    border: 0;
+    background-color: rgb(252, 243, 228);
+}
+
+.accordion-collapse {
+    background-color: rgb(252, 243, 228);
+    border-left: none;
+    border-right: none;
+}
+
+.first-body a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.657);
+    transition: all ease-in-out 0.6s;
+}
+
+.first-body a:hover {
+    color: rgb(121, 35, 46);
+}
+
+.form-check-label {
+    transition: all ease-in-out 0.6s;
+}
+
+.form-check-label:hover {
+    color: rgb(121, 35, 46);
+}
+
+.image-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    margin-top: 11%;
+    text-align: center;
+}
+
+.image-container img {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 33px;
+    background-size: cover;
+}
+
+
+.products h2 {
+    text-align: center;
+    font-weight: 200;
+    font-family: serif;
+    font-size: 40px;
+}
+
+.pro-content a {
+    text-decoration: none;
+    color: rgb(121, 35, 46);
+    font-family: serif;
+    font-size: 20px;
+}
+
+.pro-content a:hover {
+    color: rgb(126, 39, 48);
+}
+
+/* .pro-content p {
+    text-decoration: none;
+    text-align: center;
+    color: rgba(51, 51, 51);
+    font-family: serif;
+    font-size: 20px;
+} */
+
+.input-types button {
+    padding: 9px 70px;
+    border: 1px solid rgba(121, 35, 46, 1);
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgba(121, 35, 46, 0.541);
+    background-color: #ffff;
+    margin-right: 30%;
+    transition: all ease-in-out 0.8s;
+}
+
+.input-types button:hover {
+    background-color: rgb(121, 35, 46);
+    color: #ffff;
+}
+
+.footer {
+    background-color: rgb(109, 28, 28);
+    padding: 125px 65px;
+}
+
+.footer li {
+    list-style: none;
+    transition: all ease-in-out 0.2s;
+}
+
+.footer li:hover {
+    text-decoration: underline;
+    color: #ffff;
+}
+
+.foot-icon {
+    margin-top: 2%;
+    color: #ffffffaf;
+}
+
+.foot-icon :hover {
+    color: #ffff;
+}
+
+.footer li a {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 200;
+    line-height: 3.8;
+    color: #ffff;
+    text-decoration: none;
+}

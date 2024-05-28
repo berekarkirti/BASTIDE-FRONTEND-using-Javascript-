@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart</title>
+  <style>
+    body {
+      overflow-x: hidden;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(255, 235, 205, 0.392)
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #333;
+    }
+
+    #mainSection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      width: 500px;
+      height: 800px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .card-founder,
+    .card-category {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .card-price {
+      margin: 10px 0;
+      font-size: 18px;
+      color: rgb(121, 35, 46);
+      font-weight: bold;
+    }
+
+    .card-button {
+      display: block;
+      width: 50%;
+      margin: auto;
+      margin-top: 19%;
+      padding: 10px;
+      background-color:  rgb(121, 35, 46);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .card-button:hover {
+      background-color: #c00;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>This is cart page</h1>
+  <div id="mainSection"></div>
+
+  <script>
+    function Fetchdata() {
+      fetch("http://localhost:3000/cart")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Fetched data:", data); // Log fetched data
+          Cardlist(data);
+        })
+        .catch((err) => console.error("Fetch error:", err));
+    }
+
+    Fetchdata();
+
+    function Cardlist(data) {
+      const store = data.map((el) => Card(el.id, el.image, el.title, el.price, el.category));
+      const mainSection = document.getElementById("mainSection");
+      mainSection.innerHTML = store.join("");
+    }
+
+    function Card(id, image, title, price,  category) {
+      let singlecard = `
+        <div class="card" data-id="${id}">
+          <a href="descripation.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}&category=${encodeURIComponent(category)}&id=${encodeURIComponent(id)}">
+            <div class="card-img">
+              <img src="${image}" alt="pitch">
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">${title}</h4>
+              <p class="card-category">${category}</p>
+              <p class="card-price">${price}</p>
+            </div>
+          </a>
+          <button data-id="${id}" class="card-button">Delete</button>
+        </div>
+      `;
+      return singlecard;
+    }
+
+    document.addEventListener("click", (e) => {
+      if (e.target.classList.contains("card-button")) {
+        console.log("Delete button clicked:", e.target.dataset.id); 
+        DeleteProduct(e.target.dataset.id);
+      }
+    });
+
+    function DeleteProduct(id) {
+      fetch(`http://localhost:3000/cart/${id}`, {
+        method: "DELETE"
+      })
+        .then((res) => {
+          console.log("Delete response status:", res.status); 
+          return res.json();
+        })
+        .then((data) => {
+          console.log("Delete response data:", data); 
+          alert("Deleted...");
+          document.querySelector(`.card[data-id='${id}']`).remove();
+        })
+        .catch((err) => console.error("Delete error:", err));
+    }
+  </script>
+</body>
+
+</html>

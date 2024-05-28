@@ -1,0 +1,111 @@
+{
+  "product": [
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_potpourri_700g_ambre_img1_2400x_3712496d-818e-4234-afa1-7285c635f2f7.jpg?v=1706256144&width=2200",
+      "title": "Ambre d'Or Potpourri Crystals",
+      "price": "$80.00",
+      "category": "Body Lotion ",
+      "id": "0dd2"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/files/bastide_fragrance_ambremaquis100ml_img1_size2200x_40f46233-4ed9-45f5-b163-5d0990a2cf88.jpg?v=1706286053&width=2000",
+      "title": "Ambre Maquis Eau de Toilette",
+      "price": "From $35.00",
+      "category": "Body Wash",
+      "id": "31f9"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_scentedsoap_ambresoir_img1_2200x_5b7ae924-e1cd-483d-9656-d18d9baa1e59.jpg?v=1706256171&width=1415",
+      "title": "Ambre Soir Scented Soap",
+      "price": "From $8.00",
+      "category": "Fragrance",
+      "id": "7e7b"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_bodyWash_500ml_ambreMaquis_img1_2400x_acd7a4b1-a279-4cb8-8a85-0cda7a9eaacc.jpg?v=1706256000&width=2400",
+      "title": "Ambre Maquis Gentle Body Wash",
+      "price": "From $10.00",
+      "category": "Body Wash",
+      "id": "8f8e"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_potpourri_refreshOil_ambre_img1_2400x_e08b60db-54b9-481a-8c4c-1c6f109c28fe.jpg?v=1706256274&width=900",
+      "title": "Ambre d'Or Potpourri Refresher Oil",
+      "price": "$24.00",
+      "category": "Home Potpourri",
+      "id": "f1bf"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/products/Bastide_candle_ambresoir_img1_2200x_5becb2d4-79d4-4528-9ea0-a1397832a6ed.jpg?v=1706256451&width=2001",
+      "title": "Ambre Soir Scented Candle",
+      "price": "$68.00",
+      "category": "Home Candles",
+      "id": "6560"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_handcream_ambresoir_img1_size2200x_ba3a7f2a-b323-4563-a3b3-7507c93b4db4.jpg?v=1706256340&width=2091",
+      "title": "Ambre Soir Hand Cream",
+      "price": "$14.00",
+      "category": "Hand Cream",
+      "id": "4bce"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_handwash_ambresoir_img1_2200x_93d9510f-3b01-42f1-9a24-f821b1eff42c.jpg?v=1706256261&width=1616",
+      "title": "Ambre Soir Artisanal Hand Wash",
+      "price": "$35.00",
+      "category": "Body Wash",
+      "id": "fc64"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_handlotion_300ml_ambre_img1_2400x_1278ffda-d4a5-4fb5-90d6-bbabaa94e756.jpg?v=1706256317&width=2445",
+      "title": "Ambre Soir Hand and Body Lotion",
+      "price": "$50.00",
+      "category": "Scented Soaps",
+      "id": "8440"
+    },
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_candles_tripleFlame_Ambre_img1_1500x_1fcc351a-1b49-49fa-9e7e-a8935cb6878f.jpg?v=1706256322&width=1457",
+      "title": "Ambre Soir Trio Scented Candles",
+      "price": "Save $35.00",
+      "category": "Scented Soaps",
+      "id": "1d23"
+    }
+  ],
+  "cart": [
+    {
+      "image": "https://bastide.com/cdn/shop/products/bastide_candles_tripleFlame_Ambre_img1_1500x_1fcc351a-1b49-49fa-9e7e-a8935cb6878f.jpg?v=1706256322&width=1457",
+      "title": "Ambre Soir Trio Scented Candles",
+      "price": "Save $35.00",
+      "category": "Scented Soaps",
+      "id": "dfb5"
+    },
+    {
+      "id": "8f90",
+      "title": "Ambre Maquis Eau de Toilette",
+      "image": "https://bastide.com/cdn/shop/files/bastide_fragrance_ambremaquis100ml_img1_size2200x_40f46233-4ed9-45f5-b163-5d0990a2cf88.jpg?v=1706286053&width=2000",
+      "price": "From $35.00",
+      "category": null
+    },
+    {
+      "id": "aacc",
+      "title": "Ambre d'Or Potpourri Refresher Oil",
+      "image": "https://bastide.com/cdn/shop/products/bastide_potpourri_refreshOil_ambre_img1_2400x_e08b60db-54b9-481a-8c4c-1c6f109c28fe.jpg?v=1706256274&width=900",
+      "price": "$24.00",
+      "category": null
+    },
+    {
+      "id": "b255",
+      "title": "Ambre Soir Scented Candle",
+      "image": "https://bastide.com/cdn/shop/products/Bastide_candle_ambresoir_img1_2200x_5becb2d4-79d4-4528-9ea0-a1397832a6ed.jpg?v=1706256451&width=2001",
+      "price": "$68.00",
+      "category": null
+    },
+    {
+      "id": "8d80",
+      "title": "Ambre Maquis Eau de Toilette",
+      "image": "https://bastide.com/cdn/shop/files/bastide_fragrance_ambremaquis100ml_img1_size2200x_40f46233-4ed9-45f5-b163-5d0990a2cf88.jpg?v=1706286053&width=2000",
+      "price": "From $35.00",
+      "category": null
+    }
+  ]
+}

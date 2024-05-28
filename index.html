@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstarp icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Slick Carousel CSS and JavaScript files -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body style="background-color: rgba(255, 235, 205, 0.392);">
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <ul style="list-style: none;">
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Fragrances
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Hand & Body
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Home
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Gifts
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Journal
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">About
+                                    <hr>
+                                </a></li>
+                            <li><a href="product.html" style="font-size: 20px;color: #a5a2a2;text-decoration: none;"><img
+                                        src="image/person.svg" alt=""
+                                        style="height: 30px;width: 30px;">&nbsp;&nbsp;Login</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider -->
+    <div class="head-slider">
+        <div id="sliding-text">Special Offer: 50% Off! | Limited Time Only | Mother's Day Sale!
+            $100, | Free Shipping on Orders $75+ |</div>
+    </div>
+
+    <!-- navbar -->
+    <section class="header">
+        <div class="container-fluid justify-content-evenly align-item-center" id="#navbar"
+            style="height:80px; background-color:rgb(249, 249, 249);position: fixed;">
+            <div class="row d-flex justify-content-around">
+                <!-- list-icon -->
+                <!-- button to toggle left side offcanvas -->
+                <div class="col-1">
+                    <a href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft"
+                        aria-controls="offcanvasLeft"><img src="image/list.svg" alt="" class="d-lg-none"
+                            style="height: 23px;width: 23px;margin-top: 20px;"></a>
+                </div>
+                <!-- logo -->
+                <div class="col-3 mt-2">
+                    <div class="logo ">
+                        <img src="image/bastide_logo.avif" alt="">
+                    </div>
+                </div>
+                <!-- menu -->
+                <div class="col-6 d-sm-none d-md-none d-lg-none d-xl-block mt-3">
+                    <div class="menu">
+                        <ul class="d-flex">
+                            <li><a href="product.html" class="underline-hover-effect">Fragrances</a></li>
+                            <li><a href="product.html" class="underline-hover-effect">Hand & Body</a></li>
+                            <li><a href="product.html" class="underline-hover-effect">Home</a></li>
+                            <li><a href="product.html" class="underline-hover-effect">Gifts</a></li>
+                            <li><a href="product.html" class="underline-hover-effect">Bestsellers</a></li>
+                            <li><a href="product.html" class="underline-hover-effect">Journal</a></li>
+                            <li><a href="product.html" class="underline-hover-effect">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- icon -->
+                <div class="col-2 mt-1">
+                    <div class="icon ">
+                        <ul>
+                            <li><a href="login.html"><img src="image/person.svg" alt=""></a></li>
+                            <li><a href="javascript:void(0);" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                                    aria-controls="offcanvasTop">
+                                    <img src="image/search.svg" alt="">
+
+                                    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop"
+                                        aria-labelledby="offcanvasTopLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 id="offcanvasTopLabel">Offcanvas Top</h5>
+                                            <button type="button" class="btn-close text-reset"
+                                                data-bs-dismiss="offcanvas" aria-label="Close">
+                                            </button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <section class="header">
+                                                <div class="container-fluid justify-content-evenly align-item-center"
+                                                    id="#navbar"
+                                                    style="height:80px; background-color:rgb(249, 249, 249);position: fixed;">
+                                                    <div class="row d-flex justify-content-around">
+                                                        <!-- list-icon -->
+                                                        <!-- button to toggle left side offcanvas -->
+                                                        <div class="col-1">
+                                                            <a href="" data-bs-toggle="offcanvas"
+                                                                data-bs-target="#offcanvasLeft"
+                                                                aria-controls="offcanvasLeft"><img src="image/list.svg"
+                                                                    alt="" class="d-lg-none"
+                                                                    style="height: 23px;width: 23px;margin-top: 20px;"></a>
+                                                        </div>
+                                                        <!-- logo -->
+                                                        <div class="col-3 mt-2">
+                                                            <div class="logo ">
+                                                                <img src="image/bastide_logo.avif" alt=""
+                                                                    style=" height: 50px;width: 108px;">
+                                                            </div>
+                                                        </div>
+                                                        <!-- menu -->
+                                                        <div class="col-6 d-sm-none d-md-none d-lg-none d-xl-block ">
+                                                            <div class="menu">
+                                                                <ul class="d-flex">
+                                                                    <li><a href="#"
+                                                                            class="underline-hover-effect">Fragrances</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="underline-hover-effect">Hand
+                                                                            & Body</a></li>
+                                                                    <li><a href="#"
+                                                                            class="underline-hover-effect">Home</a></li>
+                                                                    <li><a href="#"
+                                                                            class="underline-hover-effect">Gifts</a>
+                                                                    </li>
+                                                                    <li><a href="#"
+                                                                            class="underline-hover-effect">Bestsellers</a>
+                                                                    </li>
+                                                                    <li><a href="#"
+                                                                            class="underline-hover-effect">Journal</a>
+                                                                    </li>
+                                                                    <li><a href="#"
+                                                                            class="underline-hover-effect">About</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- icon -->
+                                                        <div class="col-2 mt-1">
+                                                            <div class="icon ">
+                                                                <ul>
+                                                                    <li><a href="login.html"><img src="image/person.svg"
+                                                                                alt=""></a></li>
+                                                                    <li><a href=""><img src="image/search.svg"
+                                                                                alt=""></a></li>
+                                                                    <li><a href=""><img src="image/lock.svg" alt=""></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- search-bar -->
+                                                        <div
+                                                            class="search-bar  d-flex justify-content-between align-item-center mt-4 ">
+                                                            <img src="image/search.svg" alt=""
+                                                                style=" height:25px;width:25px">
+                                                            <input type="text" placeholder="Search for ..."
+                                                                style="width: 95%;height: 60px;border: none;font-size: 22px;">
+                                                            <button type="button" class="btn-close text-reset"
+                                                                data-bs-dismiss="offcanvas" aria-label="Close"
+                                                                style="height: 25px; width: 25px;"></button>
+                                                        </div>
+
+                                </a></li>
+                            <li><a href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img
+                                        src="image/lock.svg" alt="">
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                                        aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                                            <button type="button" class="btn-close text-reset"
+                                                data-bs-dismiss="offcanvas" aria-label="Close">
+                                            </button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <div class="cart-head">
+                                                <h2
+                                                    style="font-size: 25px;color: black;font-weight:normal;font-family:serif;">
+                                                    Cart</h2>
+                                                <hr style="color: rgba(0, 0, 0, 0.641);height: 2px;">
+                                            </div>
+                                            <div class="cart-body">
+                                                <p
+                                                    style="text-align: center;margin-top: 80%;font-size: 22px;color: rgba(0, 0, 0, 0.593);">
+                                                    Your cart is empty</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- front -->
+    <section>
+        <div class="container-fluid banner " style="margin-top: 60px;padding: 0%;">
+            <div class="row" style="background-color: rgb(251, 225, 186);">
+                <div class="col-6 col-sm-12 col-md-12 col-lg-6 mt-5">
+                    <img src="image/Bast_HP_Banner_6ea0891c-f180-4a04-8f93-32544e8257ba.jpg" alt=""
+                        style="height: 630px;width: 100%;">
+                </div>
+                <div class="col-6 col-sm-12 col-md-12 col-lg-6" id="side-content">
+                    <h2>The Beauty & Wellness Secrets of Provence</h2>
+                    <p>Rooted in Aix-en-Provence. Nurtured with Joy, Water, and Sun</p>
+                    <div class="underline-hover"><a href=""> Shop Best Sellers </a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- products -->
+    <section class="products">
+        <h2>Customers Love These</h2>
+        <div class="container-fluid d-flex justify-content-around products-slider">
+            <div class="col-3">
+                <div class="image-container">
+                    <div class="image1"></div>
+                </div>
+                <div class="pro-content">
+                    <a href="descripation.html">mbre d'Or Potpourri Crystals</a>
+                    <p>$80.00</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="image-container">
+                    <div class="image2"></div>
+                </div>
+                <div class="pro-content">
+                    <a href="descripation.html">Ambre Maquis Eau de Toilette</a>
+                    <p>$35.00</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="image-container">
+                    <div class="image3"></div>
+                </div>
+                <div class="pro-content">
+                    <a href="descripation.html">mbre d'Or Potpourri Crystals</a>
+                    <p>$8.00</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="image-container">
+                    <div class="image4"></div>
+                </div>
+                <div class="pro-content">
+                    <a href="descripation.html">Ambre Maquis Eau de Toilette</a>
+                    <p>$10.00</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="image-container">
+                    <div class="image5"></div>
+                </div>
+                <div class="pro-content">
+                    <a href="descripation.html">mbre d'Or Potpourri Crystals</a>
+                    <p>$80.00</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="image-container">
+                    <div class="image6"></div>
+                </div>
+                <div class="pro-content">
+                    <a href="descripation.html">Ambre Maquis Eau de Toilette</a>
+                    <p>$35.00</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="image-container">
+                    <div class="image7"></div>
+                </div>
+                <div class="pro-content">
+                    <a href="descripation.html">mbre d'Or Potpourri Crystals</a>
+                    <p>$8.00</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="image-container">
+                    <div class="image8"></div>
+                </div>
+                <div class="pro-content">
+                    <a href="descripation.html">Ambre Maquis Eau de Toilette</a>
+                    <p>$10.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- middle button -->
+    <button id="middle-button"><a href="product.html">View All</a></button>
+
+    <!-- zoom-effect -->
+    <section class="ads">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-between">
+                <div class="col-4 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <div class="zoom">
+                        <img src="image/Soap.jpg" alt="zoom" width="520px" height="520px"
+                            class="alignleft size-medium wp-image-7000" />
+                    </div>
+                    <a href="product.html">Browse Scented Soaps</a>
+                </div>
+                <div class="col-4 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <div class="zoom">
+                        <img src="image/Frag.webp" alt="zoom" width="520px" height="520px"
+                            class="alignleft size-medium wp-image-7000" />
+                    </div>
+                    <a href="product.html">Browse Perfumes</a>
+                </div>
+                <div class="col-4 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <div class="zoom">
+                        <img src="image/Hand_and_body.jpg" alt="zoom" width="520px" height="520px"
+                            class="alignleft size-medium wp-image-7000" />
+                    </div>
+                    <a href="product.html">Browse Hand + Body</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- discovery-set -->
+    <section class="discovery-set mt-5" style="margin-bottom: 6%;">
+        <div class="container-fluid">
+            <div class="row d-flex">
+                <div class="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-6" style="margin: auto;padding: 66px;">
+                    <p id="first">La Triple Flamme Candle Discovery Set</p>
+                    <p id="second">Discover the sensorial experience of Bastide candles with our discovery set. Each
+                        candle is hand-poured into our amber bubble glass, giving a warm, intimate glow to any room when
+                        lit. It’s the perfect holiday gift for the candle connoisseur, or a way to explore Bastide’s
+                        home collection for yourself.</p>
+                </div>
+                <div class="col-6 col-sm-12 col-md-12 col-lg-6 mt-5 ">
+                    <img src="image/Homepage_Bottom_Photo_1.webp" alt="" style="height: 580px;width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- logos -->
+    <section class="logos">
+        <div class="container-fluid">
+            <div class="row">
+                <h3>Lovers & Friends</h3>
+                <div class="logo-content d-flex justify-content-evenly flex-sm-wrap" style="margin-top: 3%;">
+                    <div class="col-1 col-sm-12 col-lg-1"><img src="image/logo-1.png" alt=""></div>
+                    <div class="col-1 col-sm-12 col-lg-1"><img src="image/logo-2.png" alt=""></div>
+                    <div class="col-1 col-sm-12 col-lg-1"><img src="image/logo-3.png" alt=""></div>
+                    <div class="col-1 col-sm-12 col-lg-1"><img src="image/logo-4.png" alt=""></div>
+                    <div class="col-1 col-sm-12 col-lg-1"><img src="image/logo-5.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- prose -->
+    <section class="prose">
+        <div class="container">
+            <h2>True French Savoir-Faire</h2>
+            <p>We are molded by the love & craftsmanship of local French artisans - we like to call them<br> our
+                “Beautisans” - with their generations of deep expertise in using rich, potent, good-for-<br>you
+                ingredients sourced from Provence.</p>
+            <div class="row mt-5">
+                <div class="col-4 col-sm-12 col-md-12 col-sm-12 col-md-12 col-lg-2 col-lg-4 col-xl-4">
+                    <div class="zoom" style="height: 253px;width: 380px;">
+                        <img src="image/Blog_6.webp" alt="zoom" width="380px" height="253px"
+                            class="alignleft size-medium wp-image-7000" />
+                    </div>
+                    <p id="image-content">How To Choose A Signature Summer Fragrance</p>
+                    <div class="underline-hover"><a href="">Read more</a></div>
+                </div>
+                <div class="col-4 col-sm-12 col-md-12 col-sm-12 col-md-12 col-lg-2 col-lg-4 col-xl-4">
+                    <p id="middle-part">Summer Love, Bottled: Meet Lavande In Love</p>
+                    <div class="underline-hover"><a href="">Read more</a></div>
+                </div>
+                <div class="col-4 col-sm-12 col-md-12 col-sm-12 col-md-12 col-lg-2 col-lg-4 col-xl-4">
+                    <div class="zoom" style="height: 570px;width: 380px;">
+                        <img src="image/2.webp" alt="zoom" width="380px" height="570px"
+                            class="alignleft size-medium wp-image-7000" />
+                    </div>
+                    <p id="image-content">How to Heal and Protect Overwashed Hands</p>
+                    <div class="underline-hover"><a href="">Read more</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- middle button -->
+    <button id="middle-button"><a href="product.html">View All</a></button>
+
+    <!--subscription-->
+    <section class="subscription"
+        style="background-color: rgb(239 187 172) ; width: 100%;   height: 420px; padding: 16px;">
+        <div class="container-fluid">
+            <div class="row">
+                <h3>Like To Be First?</h3>
+                <p>Sign up to stay in the know</p>
+                <div class="input-content d-flex justify-content-evenly align-item-center " style="margin-top: 3%;">
+                    <div class="col-4 col-sm-2 col-md-6 col-lg-2">
+                        <input type="text" placeholder="E-mail" required />
+                    </div>
+                    <div class="col-4 col-sm-6 col-md-6 col-lg-3">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-logos">
+            <li><a href="index.html">Contact Us</a></li>
+            <li><a href="index.html">FAQ's</a></li>
+            <li><a href="index.html">Store Locator</a></li>
+            <li><a href="index.html">Partners & Media</a></li>
+            <div class="foot-icon">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram" style="margin-left: 2%;"></i>
+                <i class="bi bi-twitter" style="margin-left: 2%;"></i>
+            </div>
+            <li style="margin-top: 2%;"><a href="index.html">© 2024 - Bastide. All Rights Reserved.</a></li>
+            <li><a href="index.html">Terms of Use.Privacy Policy</a></li>
+        </div>
+    </section>
+
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+</body>
+
+</html>
