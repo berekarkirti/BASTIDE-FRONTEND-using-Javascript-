@@ -2,7 +2,7 @@
 let productData = [];
 
 function fetchData() {
-    fetch("http://localhost:3000/product")
+    fetch("https://bastide-backend.onrender.com/product")
         .then((res) => {
             if (!res.ok) {
                 throw new Error("Network response was not ok");
