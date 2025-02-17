@@ -220,9 +220,9 @@
         <div class="container-fluid">
             <div class="row d-flex justify-content-between" style="margin-top: 10%;">
                 <div class="col-6 col-sm-12 col-md-12 col-lg-6">
-                    <div class="product-image" style="height: 650px;width: 85%;margin-left: 15%;border-radius: 20px;">
-                        <img id="main-product-image" src="image/ho-6.jpg" alt="Product Image">
-                    </div>
+
+                    <img id="image" alt="Product Image" height="900px" width="900" class="img-fluid">
+
                     <div class="descripition" style="margin-top: 9%;">
                         <h3
                             style="font-size: 24px;color: rgb(51, 51, 51);font-family: sans-serif;line-height: 1.4;margin-left:15%">
@@ -234,7 +234,7 @@
                             sandalwood, Ambre Maquis is a warm, complex yet irresistible blend.</p>
                     </div>
                     <div class="accordion" id="accordionExample"
-                        style="border: none;background-color: rgba(255, 235, 205, 0.506);;">
+                        style="border: none;background-color: rgba(255, 235, 205, 0.506);position: relative;z-index: -9;">
                         <div class="accordion-item" style="width: 576px;border: none;">
                             <h2 class="accordion-header" id="headingOne" style="border: none;width: 576px;">
                                 <a href="product.html" id="accordians" class="accordion-button"
@@ -327,7 +327,7 @@
 
                     </div>
                     <button id="cart">Add to cart</button>
-                    <div class="slider-container">
+                    <div class="slider-container d-sm-none d-md-none d-lg-block">
                         <div class="small-title d-flex justify-content-between align-item-center">
                             <div class="slide-title">Pairs well with</div>
                             <div class="dots">
@@ -374,7 +374,7 @@
     </section>
 
     <!-- review -->
-    <section class="review " style="margin-top: 15%;">
+    <section class="review d-sm-none d-md-none d-lg-block " style="margin-top: 15%;">
         <h1
             style="font-size: 40px; text-align: center;color: rgba(51, 51, 51, 0.939);font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: normal;">
             Customer Reviews</h1>
@@ -480,89 +480,6 @@
 
 </html>
 
-<!-- <script>
-
-//   fetch data 
-// Function to fetch product data based on ID
-async function fetchProductDataById(productId) {
-    try {
-        // Fetch product data from db.json
-        const response = await fetch('db.json');
-        const data = await response.json();
-
-        // Find the product with the matching ID
-        const product = data.product.find(item => item.id === productId);
-
-        // Update description page with product data
-        if (product) {
-            document.getElementById('product-title').textContent = product.title;
-            document.getElementById('product-price').textContent = product.price;
-
-            // Update product image
-            const productImage = document.getElementById('product-image');
-            productImage.src = product.image;
-            productImage.alt = product.title;
-
-            // Log the product image URL to verify it
-            console.log('Product Image URL:', product.image);
-        } else {
-            console.error('Product not found');
-        }
-    } catch (error) {
-        console.error('Error fetching product data:', error);
-    }
-}
-
-// Get the product ID from the URL parameter
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get('id');
-
-// Call the function to fetch product data based on the ID
-if (productId) {
-    fetchProductDataById(productId);
-} else {
-    console.error('Product ID not provided');
-}
-
-
-
-
-
-
-
-    // Define param globally
-let param = new URLSearchParams(window.location.search);
-
-window.addEventListener("load", () => {
-    document.getElementById("image").src = param.get("image");
-    document.getElementById("title").innerText = param.get("title");
-    document.getElementById("category").innerText = param.get("category");
-    document.getElementById("price").innerText = param.get("price");
-});
-
-document.getElementById("cart").addEventListener("click", () => {
-    let cardata = {
-        title: param.get("title"),
-        image: param.get("image"),
-        price: param.get("price"),
-        category: param.get("category"),
-    };
-
-    // data post to cart page
-    fetch("http://localhost:3000/cart", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(cardata)
-    })
-    .then((res) => res.json())
-    .then((data) => alert("Data Added To Cart"))
-    .catch((err) => console.log(err));
-});
-
-
-</script> -->
 
 <script>
     // Function to fetch product data based on ID
@@ -577,7 +494,7 @@ document.getElementById("cart").addEventListener("click", () => {
 
             // Update description page with product data
             if (product) {
-
+                document.getElementById('product-image').image = product.image;
                 document.getElementById('product-title').textContent = product.title;
                 document.getElementById('product-price').textContent = product.price;
 

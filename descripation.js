@@ -13,7 +13,7 @@ function fetchData() {
             productData = data;
             renderProductList(data);
         })
-        .catch((err) => console.error(err)); // Use console.error for better indication of errors
+        .catch((err) => console.error(err));
 }
 
 fetchData();
@@ -23,119 +23,128 @@ function renderProductList(data) {
     if (!data || data.length === 0) {
         mainSection.innerHTML = "<p>No products available</p>";
     } else {
-        mainSection.innerHTML = data.map(el => createProductCard(el.image, el.title, el.price)).join("");
+        mainSection.innerHTML = data.map(el => createProductCard(el.id, el.image, el.title, el.price)).join("");
     }
 }
 
-function createProductCard(image, title, price) {
+
+function createProductCard({ id, image, title, price }) {
     return `
-        <div class="product-image" style="height: 650px;width: 85%;margin-left: 15%;border-radius: 20px;">
-            <img src="${image}" alt="${title}" style="height: 700px;width:100%;border-radius: 20px;">
+      <div class="product-card" onclick="navigateToDescription(${id})">
+        <div class="product-image">
+          <img src="${image}" alt="${title}" class="img-fluid rounded">
         </div>
-        <h1 style="color: rgb(121, 35, 46);font-weight: 100;font-family:serif;">${title}</h1>
-        <span style="font-size: 27px;color: rgba(51, 51, 51, 0.583);">$${price}</span><br>
+        <h2>${title}</h2>
+        <span class="product-price">$${price}</span>
+      </div>
     `;
 }
 
 
-    // head-slider
-    const slidingText = document.getElementById("sliding-text");
-    const sentences = slidingText.innerHTML.split(" | ");
-    let sentenceIndex = 0;
+function navigateToDescription(productId) {
+    // Redirect to description page with product ID as a URL parameter
+    window.location.href = `description.html?productId=${productId}`;
+}
 
-    function slideText() {
-        const maxWidth = window.innerWidth - slidingText.clientWidth;
-        let currentPosition = 0;
-        // console.log(maxWidth);
 
-        const slideInterval = setInterval(() => {
-            if (currentPosition <= maxWidth) {
-                slidingText.style.left = currentPosition + "px";
-                currentPosition += 10;
+// head-slider
+const slidingText = document.getElementById("sliding-text");
+const sentences = slidingText.innerHTML.split(" | ");
+let sentenceIndex = 0;
+
+function slideText() {
+    const maxWidth = window.innerWidth - slidingText.clientWidth;
+    let currentPosition = 0;
+    // console.log(maxWidth);
+
+    const slideInterval = setInterval(() => {
+        if (currentPosition <= maxWidth) {
+            slidingText.style.left = currentPosition + "px";
+            currentPosition += 10;
+        }
+        else {
+            clearInterval(slideInterval);
+            setTimeout(() => {
+                slidingText.style.left = "0px";
+                sentenceIndex = (sentenceIndex + 1) % sentences.length;
+                slidingText.innerHTML = sentences[sentenceIndex];
+                setTimeout(slideText, 2000);
             }
-            else {
-                clearInterval(slideInterval);
-                setTimeout(() => {
-                    slidingText.style.left = "0px";
-                    sentenceIndex = (sentenceIndex + 1) % sentences.length;
-                    slidingText.innerHTML = sentences[sentenceIndex];
-                    setTimeout(slideText, 2000);
-                }
-                    , 1000);
-            }
-        }, 10);
-    }
-    slideText();
+                , 1000);
+        }
+    }, 10);
+}
+slideText();
 
-    // increment-decrement
-    let products = [
-        { quantity: 1 },
-    ];
+// increment-decrement
+let products = [
+    { quantity: 1 },
+];
 
-    function renderProducts() {
-        const productList = document.getElementById('product-list');
-        productList.innerHTML = '';
-        products.forEach((product, index) => {
-            const productDiv = document.createElement('div');
-            productDiv.innerHTML = `
+function renderProducts() {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = '';
+    products.forEach((product, index) => {
+        const productDiv = document.createElement('div');
+        productDiv.innerHTML = `
     <button onclick="decrementQuantity(${index})" class="decrement-button">-</button>
     <span class="quantity">${product.quantity}</span>
     <button onclick="incrementQuantity(${index})" class="increment-button">+</button>
 
     `;
-            productList.appendChild(productDiv);
-        });
-    }
+        productList.appendChild(productDiv);
+    });
+}
 
-    function incrementQuantity(index) {
-        products[index].quantity++;
-        renderProducts();
-    }
+function incrementQuantity(index) {
+    products[index].quantity++;
+    renderProducts();
+}
 
-    function decrementQuantity(index) {
-        if (products[index].quantity > 0) {
-            products[index].quantity--;
-        }
-        renderProducts();
+function decrementQuantity(index) {
+    if (products[index].quantity > 0) {
+        products[index].quantity--;
     }
     renderProducts();
+}
+renderProducts();
 
 
-        // small slider
-        let currentSlideIndex = 0;
+// small slider
+let currentSlideIndex = 0;
 
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
 
-            if (index >= slides.length) {
-                currentSlideIndex = 0;
-            } else if (index < 0) {
-                currentSlideIndex = slides.length - 1;
-            } else {
-                currentSlideIndex = index;
-            }
+    if (index >= slides.length) {
+        currentSlideIndex = 0;
+    } else if (index < 0) {
+        currentSlideIndex = slides.length - 1;
+    } else {
+        currentSlideIndex = index;
+    }
 
-            const offset = -currentSlideIndex * 100;
-            document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+    const offset = -currentSlideIndex * 100;
+    document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
 
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[currentSlideIndex].classList.add('active');
-        }
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlideIndex].classList.add('active');
+}
 
-        function currentSlide(index) {
-            showSlide(index);
-        }
+function currentSlide(index) {
+    showSlide(index);
+}
 
-        // Initial display
-        showSlide(currentSlideIndex);
+// Initial display
+showSlide(currentSlideIndex);
 
 // accordian
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const accordionButtons = document.querySelectorAll('.accordion-button');
 
     accordionButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const expanded = button.getAttribute('aria-expanded') === 'true' || false;
 
             // Close all open accordions
@@ -156,5 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
 
 

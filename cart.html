@@ -73,7 +73,7 @@
       margin: auto;
       margin-top: 19%;
       padding: 10px;
-      background-color:  rgb(121, 35, 46);
+      background-color: rgb(121, 35, 46);
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -96,7 +96,7 @@
       fetch("https://bastide-backend.onrender.com/cart")
         .then((res) => res.json())
         .then((data) => {
-          console.log("Fetched data:", data); // Log fetched data
+          console.log("Fetched data:", data);
           Cardlist(data);
         })
         .catch((err) => console.error("Fetch error:", err));
@@ -110,7 +110,7 @@
       mainSection.innerHTML = store.join("");
     }
 
-    function Card(id, image, title, price,  category) {
+    function Card(id, image, title, price, category) {
       let singlecard = `
         <div class="card" data-id="${id}">
           <a href="descripation.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}&category=${encodeURIComponent(category)}&id=${encodeURIComponent(id)}">
@@ -131,7 +131,7 @@
 
     document.addEventListener("click", (e) => {
       if (e.target.classList.contains("card-button")) {
-        console.log("Delete button clicked:", e.target.dataset.id); 
+        console.log("Delete button clicked:", e.target.dataset.id);
         DeleteProduct(e.target.dataset.id);
       }
     });
@@ -141,11 +141,11 @@
         method: "DELETE"
       })
         .then((res) => {
-          console.log("Delete response status:", res.status); 
+          console.log("Delete response status:", res.status);
           return res.json();
         })
         .then((data) => {
-          console.log("Delete response data:", data); 
+          console.log("Delete response data:", data);
           alert("Deleted...");
           document.querySelector(`.card[data-id='${id}']`).remove();
         })

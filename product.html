@@ -263,15 +263,14 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                             <li style="border-bottom: 1px solid rgba(220, 220, 220, 0.793);text-align: center;">Featured
                             </li>
-                            <!-- <li><a href="#" class="dropdown-item" id="sort-low-to-high">Price, low to high</a></li>
-                            <li><a href="#" class="dropdown-item" id="sort-high-to-low">Price, high to low</a></li> -->
+
                             <li>
-                                <button id="sort-low-to-high" class="u-full-width button button-primary">
+                                <button id="sort-low-to-high" class="u-full-width button button-primary" style="padding: 10px 16px; border:none;color: rgb(109, 28, 28);font-size: 16px;background-color: white;font-weight: 400;border-bottom: 1px ;">
                                     Sort Low To High
                                 </button>
                             </li>
                             <li>
-                                <button id="sort-high-to-low" class="u-full-width button button-primary">
+                                <button id="sort-high-to-low" class="u-full-width button button-primary" style="padding: 10px 16px; border:none;color: rgb(109, 28, 28);font-size: 16px;background-color: white;font-weight: 400;border-bottom: 1px ;">
                                     Sort High To Low
                                 </button>
                             </li>
@@ -287,7 +286,7 @@
         <div class="container-fluid">
             <div class="row mainSection">
                 <div class="col-lg-2 col-sm-12 col-md-12">
-                    <!-- Accordion code here -->
+                    <!-- Accordion code -->
                     <div class="accordion" id="accordionExample"
                         style="border: none;background-color:rgba(255, 235, 205, 0.392) ;">
                         <div class="accordion-item">
@@ -364,14 +363,12 @@
                     </div>
                 </div>
                 <div class="col-lg-10 col-sm-12 col-md-12">
-                   <div class="d-flex justify-content-evenly flex-wrap" id="data-list-wrapper">
-                      
-                   </div>>
-                    
-                   </div>
+                    <div class="d-flex justify-content-evenly flex-wrap" id="data-list-wrapper">
+                    </div>>
                 </div>
-                
             </div>
+
+        </div>
         </div>
     </section>
 
@@ -439,68 +436,71 @@
         }, 10);
     }
     slideText();
-// Fetching product data
-let productData = [];
+    // Fetching product data
+    let productData = [];
 
-function fetchData() {
-    fetch("https://bastide-backend.onrender.com/product")
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return res.json();
-        })
-        .then((data) => {
-            console.log(data);
-            productData = data;
-            renderProductList(data);
-        })
-        .catch((err) => console.log("Error fetching data:", err));
-}
+    function fetchData() {
+        fetch("https://bastide-backend.onrender.com/product")
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return res.json();
+            })
+            .then((data) => {
+                console.log(data);
+                productData = data;
+                renderProductList(data);
+            })
+            .catch((err) => console.log("Error fetching data:", err));
+    }
 
-function renderProductList(data) {
-    const mainSection = document.querySelector('#data-list-wrapper');
-    mainSection.innerHTML = data.map(el => createProductCard(el.id, el.image, el.title, el.price)).join("");
-}
+    function renderProductList(data) {
+        const mainSection = document.querySelector('#data-list-wrapper');
+        mainSection.innerHTML = data.map(el => createProductCard(el.id, el.image, el.title, el.price)).join("");
+    }
 
-function createProductCard(id, image, title, price) {
-    let singleCard = `<a href="descripation.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}&id=${encodeURIComponent(id)}" class="product-card d-flex">
+    function createProductCard(id, image, title, price) {
+        let singleCard = `<a class="nav-link kirti"  href="descripation.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}&id=${encodeURIComponent(id)}" class="product-card d-flex">
             <div class="col-3 col-sm-12 col-md-6 col-lg-6 col-xl-3">
             <div class="image-container">
                 <img src="${image}" alt="${title}" class="img-fluid ms-sm-5">
             </div>
-            <div class="pro-content">
-                <p style="font-size: 20px; color: #333; margin-bottom: 5px;text-decoration:none;">${title}</p>
-                    <p style="font-size: 18px; color: #555; ">${price}</p>
+            <div class="pro-content" style="width:400px">
+                <p style="font-size: 20px; color: rgba(121, 35, 46, 1); margin-bottom: 5px;text-decoration:none;text-align:center;font-weight:700;font-family: serif;">${title}</p>
+                <p style="font-size: 18px; color:  rgba(121, 35, 46, 1); text-align:center; ">${price}</p>
             </div>
         </div>
      
     </a>`;
-    return singleCard;
-}
+        return singleCard;
+    }
 
-window.onload = fetchData;
+    window.onload = fetchData;
 
 
-// shorting:-
-let sortAtoZBtn = document.getElementById("sort-low-to-high");
-let sortZtoABtn = document.getElementById("sort-high-to-low");
+    // shorting:-
+    // Correctly reference the buttons
+    let sortAtoZBtn = document.getElementById("sort-low-to-high");
+    let sortZtoABtn = document.getElementById("sort-high-to-low");
 
-// SORTING PART low to high
-sortAtoZBtn.addEventListener("click", () => {
+    // SORTING PART: Low to High
+    sortAtoZBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    const sortedData = productData.slice().sort((a, b) => a.price - b.price);
+    console.log("Sorted Low to High:", sortedData);
+    renderProductList(sortedData);
+});
 
-const sortAtoZdata = productdata.sort((a, b) => a.price - b.price)
-Cardlist(sortAtoZdata)
+    // SORTING PART: High to Low
+    sortZtoABtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    const sortedData = productData.slice().sort((a, b) => b.price - a.price);
+    console.log("Sorted High to Low:", sortedData);
+    renderProductList(sortedData);
+});
 
-})
 
-// SORTING PART high to low
-sortZtoABtn.addEventListener("click", () => {
-
-const sortZtoAdata = productdata.sort((a, b) => b.price - a.price)
-Cardlist(sortZtoAdata)
-
-})
 
 
 </script>

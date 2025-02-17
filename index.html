@@ -21,7 +21,7 @@
 
 </head>
 
-<body style="background-color: rgba(255, 235, 205, 0.392);">
+<body style="background-color: rgba(255, 235, 205, 0.392);overflow-x: hidden;">
     <!-- offcanvas -->
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
         id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
@@ -33,34 +33,44 @@
                 <div class="row">
                     <div class="col">
                         <ul style="list-style: none;">
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Fragrances
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">Fragrances
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Hand & Body
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">Hand & Body
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Home
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">Home
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Gifts
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">Gifts
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">Bestsellers
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">Journal
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">Journal
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;text-decoration: none;color: #333333;">About
+                            <li><a href="product.html"
+                                    style="font-size: 20px;text-decoration: none;color: #333333;">About
                                     <hr>
                                 </a></li>
-                            <li><a href="product.html" style="font-size: 20px;color: #a5a2a2;text-decoration: none;"><img
+                            <li><a href="product.html"
+                                    style="font-size: 20px;color: #a5a2a2;text-decoration: none;"><img
                                         src="image/person.svg" alt=""
                                         style="height: 30px;width: 30px;">&nbsp;&nbsp;Login</a></li>
                         </ul>
@@ -78,7 +88,7 @@
     </div>
 
     <!-- navbar -->
-    <section class="header">
+    <section class="header" >
         <div class="container-fluid justify-content-evenly align-item-center" id="#navbar"
             style="height:80px; background-color:rgb(249, 249, 249);position: fixed;">
             <div class="row d-flex justify-content-around">
@@ -235,13 +245,15 @@
 
     <!-- front -->
     <section>
-        <div class="container-fluid banner " style="margin-top: 60px;padding: 0%;">
+        <div class="container-fluid banner" style="margin-top: 60px; padding: 0;">
             <div class="row" style="background-color: rgb(251, 225, 186);">
-                <div class="col-6 col-sm-12 col-md-12 col-lg-6 mt-5">
-                    <img src="image/Bast_HP_Banner_6ea0891c-f180-4a04-8f93-32544e8257ba.jpg" alt=""
-                        style="height: 630px;width: 100%;">
+                <!-- Image Section -->
+                <div class="col-lg-6 col-md-12 col-sm-12 mt-5">
+                    <img src="image/Bast_HP_Banner_6ea0891c-f180-4a04-8f93-32544e8257ba.jpg" alt="" class="img-fluid"
+                        style="height: auto; width: 100%;">
                 </div>
-                <div class="col-6 col-sm-12 col-md-12 col-lg-6" id="side-content">
+                <!-- Content Section -->
+                <div class="col-lg-6 col-md-12 col-sm-12 d-flex flex-column justify-content-center" id="side-content">
                     <h2>The Beauty & Wellness Secrets of Provence</h2>
                     <p>Rooted in Aix-en-Provence. Nurtured with Joy, Water, and Sun</p>
                     <div class="underline-hover"><a href=""> Shop Best Sellers </a></div>
@@ -251,10 +263,10 @@
     </section>
 
     <!-- products -->
-    <section class="products">
+    <section class="products" style="position: relative;z-index: -1;">
         <h2>Customers Love These</h2>
         <div class="container-fluid d-flex justify-content-around products-slider">
-            <div class="col-3">
+            <div class="col-3 ms-sm-3">
                 <div class="image-container">
                     <div class="image1"></div>
                 </div>
@@ -263,7 +275,7 @@
                     <p>$80.00</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 ms-sm-3">
                 <div class="image-container">
                     <div class="image2"></div>
                 </div>
@@ -272,7 +284,7 @@
                     <p>$35.00</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 ms-sm-3">
                 <div class="image-container">
                     <div class="image3"></div>
                 </div>
@@ -281,7 +293,7 @@
                     <p>$8.00</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 ms-sm-3">
                 <div class="image-container">
                     <div class="image4"></div>
                 </div>
@@ -290,7 +302,7 @@
                     <p>$10.00</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 ms-sm-3">
                 <div class="image-container">
                     <div class="image5"></div>
                 </div>
@@ -299,7 +311,7 @@
                     <p>$80.00</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 mb-sm-3">
                 <div class="image-container">
                     <div class="image6"></div>
                 </div>
@@ -308,7 +320,7 @@
                     <p>$35.00</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 ms-sm-3">
                 <div class="image-container">
                     <div class="image7"></div>
                 </div>
@@ -317,7 +329,7 @@
                     <p>$8.00</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 ms-sm-3">
                 <div class="image-container">
                     <div class="image8"></div>
                 </div>
@@ -336,24 +348,24 @@
     <section class="ads">
         <div class="container-fluid">
             <div class="row d-flex justify-content-between">
-                <div class="col-4 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                <div class="col-4 bug col-sm-12 col-md-12 col-lg-12 col-xl-4">
                     <div class="zoom">
                         <img src="image/Soap.jpg" alt="zoom" width="520px" height="520px"
-                            class="alignleft size-medium wp-image-7000" />
+                            class="img-fluid size-medium wp-image-7000" />
                     </div>
                     <a href="product.html">Browse Scented Soaps</a>
                 </div>
                 <div class="col-4 col-sm-12 col-md-12 col-lg-12 col-xl-4">
                     <div class="zoom">
                         <img src="image/Frag.webp" alt="zoom" width="520px" height="520px"
-                            class="alignleft size-medium wp-image-7000" />
+                            class="img-fluid  size-medium wp-image-7000" />
                     </div>
                     <a href="product.html">Browse Perfumes</a>
                 </div>
                 <div class="col-4 col-sm-12 col-md-12 col-lg-12 col-xl-4">
                     <div class="zoom">
                         <img src="image/Hand_and_body.jpg" alt="zoom" width="520px" height="520px"
-                            class="alignleft size-medium wp-image-7000" />
+                            class="img-fluid  size-medium wp-image-7000" />
                     </div>
                     <a href="product.html">Browse Hand + Body</a>
                 </div>
@@ -373,7 +385,8 @@
                         home collection for yourself.</p>
                 </div>
                 <div class="col-6 col-sm-12 col-md-12 col-lg-6 mt-5 ">
-                    <img src="image/Homepage_Bottom_Photo_1.webp" alt="" style="height: 580px;width: 100%;">
+                    <img src="image/Homepage_Bottom_Photo_1.webp" alt="" class="img-fluid"
+                        style="height: 580px;width: 100%;">
                 </div>
             </div>
         </div>
@@ -431,19 +444,22 @@
     <button id="middle-button"><a href="product.html">View All</a></button>
 
     <!--subscription-->
-    <section class="subscription"
-        style="background-color: rgb(239 187 172) ; width: 100%;   height: 420px; padding: 16px;">
+    <section class="subscription py-5 mt-sm-5"style="background-color: rgb(239, 187, 172); font-family: serif; margin-top: 5%;">
         <div class="container-fluid">
-            <div class="row">
-                <h3>Like To Be First?</h3>
-                <p>Sign up to stay in the know</p>
-                <div class="input-content d-flex justify-content-evenly align-item-center " style="margin-top: 3%;">
-                    <div class="col-4 col-sm-2 col-md-6 col-lg-2">
-                        <input type="text" placeholder="E-mail" required />
-                    </div>
-                    <div class="col-4 col-sm-6 col-md-6 col-lg-3">
-                        <button>Subscribe</button>
-                    </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 style="font-size: 45px;">Like To Be First?</h1>
+                    <p style="color: rgba(0, 0, 0, 0.658); font-size: 18px;">Sign up to stay in the know</p>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-4 col-md-6 col-sm-8 col-10">
+                    <input type="text" class="form-control mb-2" style="height: 50px; border-radius: 10px;"
+                        placeholder="Enter your email" required>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-8">
+                    <button class="btn btn-block btn-primary"
+                        style="height: 50px; border-radius: 10px; background-color: rgb(121, 35, 46); color: #fff;">Subscribe</button>
                 </div>
             </div>
         </div>
