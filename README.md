@@ -28,3 +28,10 @@ Welcome to the **Bastide Website Clone**! This is a beautifully designed skincar
 
 ---
 
+## 🌍 Deployment 
+
+- https://bastide-frontend.vercel.app/
+- https://bastide-backend.onrender.com/product
+- https://bastide-backend.onrender.com/cart
+
+
