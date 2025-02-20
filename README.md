@@ -34,4 +34,9 @@ Welcome to the **Bastide Website Clone**! This is a beautifully designed skincar
 - https://bastide-backend.onrender.com/product
 - https://bastide-backend.onrender.com/cart
 
+## 🎥 OutPut URL
+
+- https://drive.google.com/file/d/1Q_sE0BhdzBXZTx7jr3r6V4jiANZSHcHs/view?usp=sharing
+
+
 
